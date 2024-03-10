@@ -45,29 +45,34 @@ def deleteStudent(student_id):
     conn.commit()
     print("Succesfully deleted student")
 
-print("1. Get all students")
-print("2. Add a student")
-print("3. Update a student's email")
-print("4. Delete a student")
-num = int(input())
-if(num == 1):
-    getAllStudents()
-
-elif(num == 2):
-    fname = input("Please type in the student's first name: ")
-    lname = input("Please type in the student's last name: ")
-    email = input("Please type in the students email: ")
-    day = datetime.date(int(input("Please type in the year of enrollment: ")),int(input("Please type in the month (1-12) of enrollment: ")),int(input("Please type in the day(1-31) of enrollment:")))  
-    day = day.strftime('%Y-%m-%d')
-    addStudent(fname,lname,email,day)
+while(True):
+    print("0. Exit")
+    print("1. Get all students")
+    print("2. Add a student")
+    print("3. Update a student's email")
+    print("4. Delete a student")
+    num = int(input())
+    if(num == 0):
+        break
     
-elif(num == 3):
-    id = int(input("Please type in the id of the student you would like to change the email of: "))
-    email = input("Please type in the new email you want this student to have: ")
-    updateStudentEmail(id,email)
+    elif(num == 1):
+        getAllStudents()
 
-elif(num == 4):
-    deleteStudent(int(input("Please type in the id of the student you would like to delete: ")))
+    elif(num == 2):
+        fname = input("Please type in the student's first name: ")
+        lname = input("Please type in the student's last name: ")
+        email = input("Please type in the students email: ")
+        day = datetime.date(int(input("Please type in the year of enrollment: ")),int(input("Please type in the month (1-12) of enrollment: ")),int(input("Please type in the day(1-31) of enrollment:")))  
+        day = day.strftime('%Y-%m-%d')
+        addStudent(fname,lname,email,day)
+    
+    elif(num == 3):
+        id = int(input("Please type in the id of the student you would like to change the email of: "))
+        email = input("Please type in the new email you want this student to have: ")
+        updateStudentEmail(id,email)
+
+    elif(num == 4):
+        deleteStudent(int(input("Please type in the id of the student you would like to delete: ")))
     
 
   
