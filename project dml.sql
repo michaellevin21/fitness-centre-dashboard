@@ -29,9 +29,9 @@ VALUES (1, 'Weight', '150 pounds', '175 pounds', 'Go vegan'),
        (3, 'Mile Run', '5 minutes', '7 minutes', 'Run a mile everyday');
 
 INSERT INTO Availabilities (trainer, time, date)
-VALUES (1, '10:00:00', '2024-03-28'),
-       (2, '12:00:00', '2024-03-29'),
-       (3, '14:00:00', '2024-03-30');
+VALUES (1, '12:00:00', '2024-03-28'),
+       (2, '14:00:00', '2024-03-29'),
+       (3, '16:00:00', '2024-03-30');
 
 INSERT INTO Equipment (type, needs_maintenance)
 VALUES ('Treadmill', FALSE),
